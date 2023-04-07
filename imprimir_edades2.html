@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+
+<html lang="es-es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Imprimir Edades 2</title>
+</head>
+<body>
+    <h1>PROGRAMA</h1>
+    <style>
+        p.ex1 {
+            font-size: 50px;
+        }
+    </style>
+
+    <script>
+        //Esta variable indica cuantos Saltod de Line se van a realizar
+        var saltar = 5
+
+        function SaltarLinea(saltos) {
+            var contar = 0;
+            for (var i = 0; i < saltos; i++) {
+                document.write("<br>");
+                contar++;
+                if (contar == 3) {
+                    document.write("<hr>");
+                    contar = 0;
+                }
+            }
+        }
+
+        function Imprimir(texto) {
+            document.write("<p class='ex1'>" + texto + "</p>");
+            SaltarLinea(saltar);
+        }
+
+        var año = 2025;
+
+        Imprimir("Hola Amigos...");
+        // Este código calcula las edades Juan, Pedro y Carlos
+        Imprimir("Juan tiene: " + (año - 2000) + " años");
+        Imprimir("Pedro tiene: " + (año - 1995) + " años");
+        año = 2030;
+        Imprimir("Carlos tiene: " + (año - 2000) + " años");
+    </script>
+</body>
+</html>
